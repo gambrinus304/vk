@@ -34,6 +34,7 @@ smile = ['&#128543;', '&#128556;', '&#128566;', '&#128554;', '&#128555;', '&#978
 '&#128568;', '&#128569;', '&#128572;', '&#128573;', '&#128574;', '&#128575;', '&#128571;', '&#128576;', '&#128570;', '&#127773;', 
 ]
 
+history = ['vk.com/@gambrinus-pohod', 'vk.com/@gambrinus-lekarstvo-ot-lunatizma', 'vk.com/@gambrinus-zolotaya-rybka', 'vk.com/@gambrinus-zakrytaya-informaciya', 'vk.com/@gambrinus-kot', 'vk.com/@gambrinus-istinnaya-lubov', 'vk.com/@gambrinus-malchik-yasha', 'vk.com/@gambrinus-blagodarnost']
 
 
 
@@ -121,7 +122,11 @@ while True:
                 elif text_message == 'Как быть идеальной?':
                     message = 'vk.com/@gambrinus-z'
                     send_message(sender_id, message)
-
+                elif text_message == 'Вася расскажи историю':
+                    send_message(sender_id, random.choice(history))
+                elif text_message == 'Любви тебе до гроба':
+                    message = 'Хуевь тебе пачку!'
+                    send_message(sender_id, message)
                 else:
                     pass
                     # print ('пропуск совета')
