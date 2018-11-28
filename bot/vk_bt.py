@@ -4,8 +4,10 @@ sys.path.append('..')
 import requests
 import random
 from settings import token
-from wit import Wit
 #from time import sleep
+
+
+
 
 
 
@@ -24,10 +26,9 @@ def get_update():
 
 def get_history(updates):
     ts = updates['ts']
-    r = requests.get('https://api.vk.com/method/messages.getLongPollHistory', params={'access_token': token, 'ts': ts, 'v': 5.60}).json()
-    print(r, 'get_hist')
-
-
+    lp_history = requests.get('https://api.vk.com/method/messages.getLongPollHistory', params={'access_token': token, 'ts': ts, 'v': 5.60}).json()
+    #print(lp_history, 'get_hist')
+    return lp_history
 
 
 
@@ -38,85 +39,70 @@ def get_history(updates):
 
 
 
-updates = get_update()
-print(updates)
-ts = updates['ts']
-old_ts = ts
-print('fiasko')
 
 
 while True:
     updates = get_update()
+    print('Updates: ', updates)
+    lp_history = get_history(updates)
+    print('History: ', lp_history)
 
-
-    print('__________')
-    print(updates, 'test updates')
-    # for update in updates:
-
-
-
-    ts = updates['ts']
-    print('new ts: ', ts)
-    # print(updates, 'test')
-
-
-
-    if ts == old_ts:
-        print('ravno',old_ts, ts)
-        print(updates)
-
-
-    elif ts == old_ts + 1:
-        print('oneplus', old_ts, ts)
-        print(updates)
-
-        action_code = updates['updates'][0][0]
-        print(action_code, 'action_code')
-
-        if action_code == 4:
-            message_upd = get_messages(updates)
-            message = updates[5]
-            print(message)
-        else:
-            print('other updates')
-
-
-    else:
-        print('ebash!', old_ts, ts)
-        print(updates)
-
-        update = updates['updates']
-
-
-
-
-
-    
-    old_ts = ts
-    print('old ts: ', old_ts)
-
-
-
-
+# ts = updates['ts']
+# old_ts = ts
+# print('fiasko')
 
 
 # while True:
+#     updates = get_update()
+
+
+#     print('__________')
+#     print(updates, 'test updates')
+#     # for update in updates:
+
+
+
+#     ts = updates['ts']
+#     print('new ts: ', ts)
+#     # print(updates, 'test')
+
+
+
+#     if ts == old_ts:
+#         print('ravno',old_ts, ts)
+#         print(updates)
+
+
+#     elif ts == old_ts + 1:
+#         print('oneplus', old_ts, ts)
+#         print(updates)
+
+#         action_code = updates['updates'][0][0]
+#         print(action_code, 'action_code')
+
+#         if action_code == 4:
+#             message_upd = get_messages(updates)
+#             message = updates[5]
+#             print(message)
+#         else:
+#             print('other updates')
+
+
+#     else:
+#         print('ebash!', old_ts, ts)
+#         print(updates)
+
+#         update = updates['updates']
+
+
+
+
+
     
-#     print(updates)
-#     message = updates[updates']
-
-#     try:
-#         action_code = mesage[0]
-#         print(action_code)
-
-#         for update in updates:
-#             if action_code == 4:
-#                 print('code 4')
-#             else:
-#                 print(message, '!')
+    # old_ts = ts
+    # print('old ts: ', old_ts)
 
 
 
-#     except:
-#         print('other')
+
 

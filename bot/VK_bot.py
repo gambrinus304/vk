@@ -34,7 +34,7 @@ smile = ['&#128543;', '&#128556;', '&#128566;', '&#128554;', '&#128555;', '&#978
 '&#128568;', '&#128569;', '&#128572;', '&#128573;', '&#128574;', '&#128575;', '&#128571;', '&#128576;', '&#128570;', '&#127773;', 
 ]
 
-history = ['vk.com/@gambrinus-pohod', 'vk.com/@gambrinus-lekarstvo-ot-lunatizma', 'vk.com/@gambrinus-zolotaya-rybka', 'vk.com/@gambrinus-zakrytaya-informaciya', 'vk.com/@gambrinus-kot', 'vk.com/@gambrinus-istinnaya-lubov', 'vk.com/@gambrinus-malchik-yasha', 'vk.com/@gambrinus-blagodarnost']
+history = ['vk.com/@gambrinus-pohod', 'vk.com/@gambrinus-zhidkii-azot', 'vk.com/@gambrinus-semper-fi', 'vk.com/@gambrinus-lekarstvo-ot-lunatizma', 'vk.com/@gambrinus-zolotaya-rybka', 'vk.com/@gambrinus-zakrytaya-informaciya', 'vk.com/@gambrinus-kot', 'vk.com/@gambrinus-istinnaya-lubov', 'vk.com/@gambrinus-malchik-yasha', 'vk.com/@gambrinus-blagodarnost']
 
 
 
